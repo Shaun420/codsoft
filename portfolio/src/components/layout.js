@@ -13,7 +13,7 @@ import "./layout.css"
 
 // Icons
 import { MdOutlineFavorite } from "react-icons/md";
-import { FiCoffee } from "react-icons/fi";
+import { PiCoffeeFill } from "react-icons/pi";
 
 const siteMetadata = require("../config/site-config.js");
 
@@ -36,8 +36,11 @@ const Layout = ({ children }) => {
           }}
         >
           
-          <p className="text-lg">&copy; {new Date().getFullYear()} &middot; Made by Shaunak with
-          <MdOutlineFavorite className="inline-block mx-1 text-red-600" /> and <FiCoffee className="inline-block mx-1" /></p>
+          <p className="text-lg">
+            &copy; {new Date().getFullYear()} &middot; Made by Shaunak with
+            <MdOutlineFavorite className="inline-block mx-1 text-xl text-red-600" /> and 
+            <PiCoffeeFill className="inline-block mx-1 text-xl text-amber-900" />
+          </p>
         </footer>
       </div>
     </>

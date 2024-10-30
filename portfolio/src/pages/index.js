@@ -73,13 +73,12 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/avatar.jpg"
         loading="eager"
-        width={64}
         quality={95}
         formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
+        alt="avatar image"
+        className="mb-12 rounded-full w-40 border-4 border-violet-600 drop-shadow-lg dark:brightness-95"
       />
       <h1>
         Welcome to <b>Gatsby!</b>
