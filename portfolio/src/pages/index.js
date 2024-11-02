@@ -71,29 +71,30 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/avatar.jpg"
-        loading="eager"
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt="avatar image"
-        className="mb-12 rounded-full w-40 border-4 border-violet-600 drop-shadow-lg dark:brightness-95"
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <div className="container columns-2">
+      <div className="w-full text-center">
+        <StaticImage
+          src="../images/avatar.jpg"
+          loading="eager"
+          quality={95}
+          formats={["auto", "webp", "avif"]}
+          alt="avatar image"
+          className="mb-12 rounded-full w-40 border-4 border-violet-600 drop-shadow-lg select-none
+          transition ease-linear delay-150 dark:brightness-95 hover:scale-125"
+        />
+      </div>
+      <div className="w-full text-start">
+        <h1 className="text-4xl mb-6 font-semibold">
+          Shaunak Hawaldar
+        </h1>
+        <h2 className="text-2xl mb-4 font-medium">
+          Full-stack Developer
+        </h2>
+        <button type="button" className="bg-violet-500 accent-bg-violet-500 px-4 py-2 rounded-xl text-white
+        hover:bg-violet-600 focus:ring focus:ring-violet-300" onClick={() => {window.open("/resume.pdf")}}>
+          Download Resume
+        </button>
+      </div>
     </div>
     <ul className={styles.list}>
       {links.map(link => (

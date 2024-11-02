@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={siteMetadata?.title || `Title`} />
-      <div
+      <div className="text-white"
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
           
           <p className="text-lg">
             &copy; {new Date().getFullYear()} &middot; Made by Shaunak with
-            <MdOutlineFavorite className="inline-block mx-1 text-xl text-red-600" /> and 
-            <PiCoffeeFill className="inline-block mx-1 text-xl text-amber-900" />
+            <MdOutlineFavorite className="inline-block mx-1 text-xl text-violet-700" /> and 
+            <PiCoffeeFill className="inline-block mx-1 text-xl text-violet-700" />
           </p>
         </footer>
       </div>
