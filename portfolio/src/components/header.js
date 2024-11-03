@@ -4,26 +4,20 @@ import { Link } from "gatsby"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      margin: `0 auto`,
       padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
     }}
+	className="flex items-center justify-center sticky top-0 z-50 mx-auto bg-violet-500"
   >
     <Link
       to="/"
-      style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
-      }}
+			className="mx-8 text-lg no-underline"
     >
-      {siteTitle}
+      Home
     </Link>
-	<a target="_self" href="#about" rel="external">About Me</a>
-	<a target="_self" href="#skills" rel="external">Skills</a>
-	<a target="_self" href="#certifications" rel="external">Certifications</a>
-	<a target="_self" href="#contact" rel="external">Contact Me</a>
+	<a className="mx-8 no-underline" target="_self" href="/about" rel="external">About Me</a>
+	<a className="mx-8 no-underline" target="_self" href="#projects" rel="external">Projects</a>
+	<a className="mx-8 no-underline" target="_self" href="#skills" rel="external">Skills & Certifications</a>
+	<a className="mx-8 no-underline" target="_self" href="#contact" rel="external">Contact Me</a>
     {/*<img
       alt="Gatsby logo"
       style={{ margin: 0, height: "10rem" }}

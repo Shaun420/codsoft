@@ -1,11 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import "../components/index.module.css"
+import { MdEmail } from "react-icons/md";
+import { DiGithubBadge } from "react-icons/di";
+import { SiLinkedin } from "react-icons/si";
+import { AiOutlineInstagram } from "react-icons/ai";
 
+/*
 const links = [
   {
     text: "Tutorial",
@@ -68,6 +73,7 @@ const moreLinks = [
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+*/
 
 const IndexPage = () => (
   <Layout>
@@ -91,30 +97,40 @@ const IndexPage = () => (
           Full-stack Developer
         </h2>
         <button type="button" className="bg-violet-500 accent-bg-violet-500 px-4 py-2 rounded-xl text-white
-        hover:bg-violet-600 focus:ring focus:ring-violet-300" onClick={() => {window.open("/resume.pdf")}}>
+        	hover:bg-violet-600 focus:ring focus:ring-violet-300" onClick={() => {window.open("/resume.pdf")}}>
           Download Resume
         </button>
       </div>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+		<div className="my-4">
+			<h1 className="text-xl mb-4">Contact Details:</h1>
+			<div class="flex items-center">
+				<div className="rounded-2xl hover:bg-purple-700 hover:cursor-pointer">
+					<a className="block p-8 hover:scale-125 transition ease-linear delay-150" rel="external"
+						href="mailto:admin@shaun420.eu.org" title="Email">
+						<MdEmail className="text-6xl" />
+					</a>
+				</div>
+				<div className="rounded-2xl hover:bg-purple-700 hover:cursor-pointer">
+					<a className="block p-8 hover:scale-125 transition ease-linear delay-150" rel="external"
+						href="https://github.com/Shaun420" title="GitHub">
+						<DiGithubBadge className="text-7xl" />
+					</a>
+				</div>
+				<div className="rounded-2xl hover:bg-purple-700 hover:cursor-pointer">
+					<a className="block p-8 hover:scale-125 transition ease-linear delay-150" rel="external"
+						href="https://www.linkedin.com/in/shaunakhawaldar" title="LinkedIn">
+						<SiLinkedin className="text-5xl" />
+					</a>
+				</div>
+				<div className="rounded-2xl hover:bg-purple-700 hover:cursor-pointer">
+					<a className="block p-8 hover:scale-125 transition ease-linear delay-150" rel="external"
+						href="https://www.instagram.com/shaunakhawaldar" title="Instagram">
+						<AiOutlineInstagram className="text-6xl" />
+					</a>
+				</div>
+			</div>
+		</div>
   </Layout>
 )
 

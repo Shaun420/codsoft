@@ -36,10 +36,13 @@ const Layout = ({ children }) => {
           }}
         >
           
+					<div className="flex items-start flex-row text-base my-4">
+						Email: <a className="ms-2" rel="external" href="mailto:admin@shaun420.eu.org">admin@shaun420.eu.org</a>
+					</div>
           <p className="text-lg">
             &copy; {new Date().getFullYear()} &middot; Made by Shaunak with
-            <MdOutlineFavorite className="inline-block mx-1 text-xl text-violet-700" /> and 
-            <PiCoffeeFill className="inline-block mx-1 text-xl text-violet-700" />
+            <MdOutlineFavorite className="inline-block mx-1 text-xl text-rose-400" /> and 
+            <PiCoffeeFill className="inline-block mx-1 text-xl text-yellow-500" />
           </p>
         </footer>
       </div>
